@@ -17,7 +17,7 @@ We used only the 2020-09-20 till 2020-10-13.csv
 **The folder path when reading in the scraped dataset can vary based on where you stored the file. That will need to be updated if you are reproducing our results. A screenshot showing the cell with the folder_path that needs to be updated is shown below.**   
 <img width="668" alt="Screenshot 2024-04-22 at 10 22 08 PM" src="https://github.com/LindyZhang/Football-Twitter-Sentiment-Analysis/assets/112991905/5993382c-7ed2-405f-8faa-c0007fde4967">
 
-The scraped data needs to be downloaded onto your google drive in order to execute the code in colab (it will ask for permission to access your google drive). The additional dataset needs to be downloaded into your files, and colab will have you choose the file you want to get from your computer (2020-09-20 till 2020-10-13.csv).  
+The scraped data needs to be downloaded onto your google drive in order to execute the code in colab (it will ask for permission to access your google drive) and it should be in the same directory as our .ipynb files. The additional dataset needs to be downloaded into your files, and colab will have you choose the file you want to get from your computer (2020-09-20 till 2020-10-13.csv).  
 
 All libraries used should be the most recent versions.  
 
