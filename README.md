@@ -17,7 +17,7 @@ We used only the 2020-09-20 till 2020-10-13.csv
 **The folder path when reading in the scraped dataset can vary based on where you stored the file. That will need to be updated if you are reproducing our results. A screenshot showing the cell with the folder_path that needs to be updated is shown below.**   
 <img width="668" alt="Screenshot 2024-04-22 at 10 22 08 PM" src="https://github.com/LindyZhang/Football-Twitter-Sentiment-Analysis/assets/112991905/5993382c-7ed2-405f-8faa-c0007fde4967">
 
-The scraped data needs to be downloaded onto your google drive in order to execute the code in colab (it will ask for permission to access your google drive) and it should be in the same directory as our .ipynb files. The additional dataset needs to be downloaded into your files, and colab will have you choose the file you want to get from your computer (2020-09-20 till 2020-10-13.csv).  
+The scraped data needs to be downloaded onto your Google Drive in order to execute the code in colab (it will ask for permission to access your google drive) and it should be in the same directory as our .ipynb files. The additional dataset needs to be downloaded into your files, and colab will have you choose the file you want to get from your computer (2020-09-20 till 2020-10-13.csv).  
 
 All libraries used should be the most recent versions.  
 
@@ -53,18 +53,18 @@ Fine-tuned DistilBERT model using our additional data:
 
 ## Team Member Responsibilities:  
 - Alan:
-- Arthur:
+- Arthur: Data visualization, presentation, project objectives, and help with Twitter API.
 - Lindy:  
 
 ## Code Documentation:  
 ### Vader model:  
-We used the vader model in order to label the sentiment values of our scraped tweets. This is because we did not have the capacity to label all 7500+ tweets by hand, and the vader model works well with slang. The preprocessing of the scraped tweets involves getting rid of links, remove hashtags, removing whitespace, and adding sentiment values. In order to align our sentiment values to work with binary classification, we categorized the sentiment scores returned by the vader model to be either posiive (1) or negative (0). This is one of our possible sources of error because there are neutral tweets that we ended up grouping in with positive sentiments. For example, if people tweet about selling tickets for a game and tag the teams, we mark it as positive because any press is good press (or that's the assumption we are operating under).  
+We used the Vader model in order to label the sentiment values of our scraped tweets. This is because we did not have the capacity to label all 7500+ tweets by hand, and the vader model works well with slang. The preprocessing of the scraped tweets involves getting rid of links, remove hashtags, removing whitespace, and adding sentiment values. In order to align our sentiment values to work with binary classification, we categorized the sentiment scores returned by the vader model to be either positive (1) or negative (0). This is one of our possible sources of error because there are neutral tweets that we ended up grouping in with positive sentiments. For example, if people tweet about selling tickets for a game and tag the teams, we mark it as positive because any press is good press (or that's the assumption we are operating under).  
 
 ### TF-IDF and Naive Bayes:  
 We used TF-IDF to vectorize our text and then the Naive Bayes model as our classifier. In the bag-of-words model, a text is represented as the bag of its words, disregarding grammar and word order. We want to remove stop words, punctuations, and characters that don't contribute much to the sentence's meaning. The TF-IDK Vectorizer reflects how important a word is to a document in a collection. We used the MultinomialNB class which has the hyperparameter alpha. We optimized that in our files. We then trained the model using our training and validation data and tested its performance on the test set.  
 
 ### Fine-tuning DistilBERT:  
 We created a DistilBERT model that extracted the last hidden layer of the [CLS] token and a single hidden layer feed-forward neural network as our classifier. (We added in the [CLS] and [SEP] tokens in our preprocessing). We used the AdamW optimizer with a learning rate of 5e-5, an epsilon value of 1e-8, and 2 epochs.  
-In terms of the training loop, we unpacked our data and zeroed out the gradients in the previous pass. We then performed a forward pass to compute logits and lostt, performed a backward pass to compute gradients, and clipped the norm. Finally, we updated the models parameters and learning rate.  
+In terms of the training loop, we unpacked our data and zeroed out the gradients in the previous pass. We then performed a forward pass to compute logits and lost, performed a backward pass to compute gradients, and clipped the norm. Finally, we updated the model's parameters and learning rate.  
 When evaluating, we unpacked our data, did a forward pass, and computed the loss and accuracy over the validation set.  
 Finally, when we predicted the values for the sentiment we would get for the test set tweets, we performed a forward pass to compute logits and applied a softmax to calculate the probabilities. 
