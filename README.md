@@ -53,7 +53,7 @@ Fine-tuned DistilBERT model using our additional data:
 ## Team Member Responsibilities:  
 - Alan: Data scraping, Twitter API implementation (attempted before we realized we needed to scrape), data QA, and presentation.
 - Arthur: Data visualization, presentation, project objectives, and help with Twitter API.
-- Lindy:  
+- Lindy:  TF-IDF + Naive Bayes, Fine-tuning DistilBERT, Google Colab, presentation.
 
 ## Code Documentation:  
 ### Vader model:  
