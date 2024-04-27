@@ -31,24 +31,34 @@ Basic DistilBERT model using our scraped data:
 - AUC: 0.4853
 - Accuracy: 78.15%
 - F1-score: 0.88
+- <img width="606" alt="Screenshot 2024-04-26 at 6 51 10 PM" src="https://github.com/LindyZhang/Football-Twitter-Sentiment-Analysis/assets/112991905/0281c842-cedb-4caf-915e-5157d7c20561">
+- <img width="626" alt="Screenshot 2024-04-26 at 6 51 39 PM" src="https://github.com/LindyZhang/Football-Twitter-Sentiment-Analysis/assets/112991905/2dd6d053-f7ed-4512-b769-f3696c25b4d9">
 
 Fine-tuned DistilBERT model using our scraped data:  
 - AUC: 0.4927
 - Accuracy: 64.06%
 - F1-score: 0.77
+- <img width="619" alt="Scraped_data_fine_tuned_distilbert" src="https://github.com/LindyZhang/Football-Twitter-Sentiment-Analysis/assets/112991905/ca249e3d-4cfd-4600-85bc-3142bafeff7a">
+- <img width="654" alt="Scraped_data_predictions_fine_funted_distilbert" src="https://github.com/LindyZhang/Football-Twitter-Sentiment-Analysis/assets/112991905/17b960c5-7def-4449-944c-d62231a63fc1">
 
 TF-IDF + Naive Bayes Classifier approach using our scraped data:  
 - AUC: 0.8858
 - Accuracy: 86.34%
 - F1-score: 0.92
+- <img width="609" alt="Screenshot 2024-04-26 at 6 53 04 PM" src="https://github.com/LindyZhang/Football-Twitter-Sentiment-Analysis/assets/112991905/e02bbb38-b116-4572-b7b5-986b38bd2772">
 
 TF-IDF + Naive Bayes Classifier approach using our additional data:  
 - AUC: 0.7029
 - Accuracy: 85.73%
+- <img width="624" alt="Screenshot 2024-04-26 at 6 54 50 PM" src="https://github.com/LindyZhang/Football-Twitter-Sentiment-Analysis/assets/112991905/7dd71fdc-752f-4e57-9b71-d76f6fc5bf89">
 
 Fine-tuned DistilBERT model using our additional data:  
 - AUC: 0.5021
 - Accuracy: 73.07%
+- <img width="615" alt="Screenshot 2024-04-26 at 6 55 22 PM" src="https://github.com/LindyZhang/Football-Twitter-Sentiment-Analysis/assets/112991905/2bdeb687-28bd-4238-a72f-4fe7fad2c2f5">
+- <img width="610" alt="Screenshot 2024-04-26 at 6 55 40 PM" src="https://github.com/LindyZhang/Football-Twitter-Sentiment-Analysis/assets/112991905/1c9ae0c6-9a37-42f5-9ba7-b42c20c54dd5">
+
+
 
 ## Team Member Responsibilities:  
 - Alan: Data scraping, Twitter API implementation (attempted before we realized we needed to scrape), data QA, and presentation.
