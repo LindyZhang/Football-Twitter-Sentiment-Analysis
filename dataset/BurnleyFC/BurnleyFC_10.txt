@@ -1,1 +1,0 @@
-  You can now filter &amp; visualise past #BurnleyFC match results to show:  - 50 matches (default list view)  or  - 25 matches (zoomed list view) - 80, 120, 180 or 300 (large grid icons) - 600, 1200, 1800, 2700 or 6000 (micro-grids)   Try it now, at:    https://t.co/NZBq4pQZFV  
